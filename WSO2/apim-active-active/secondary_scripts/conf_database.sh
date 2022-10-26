@@ -18,7 +18,7 @@ read -p "PLEASE TYPE THE DATABASE ADMIN PASSWORD :" DATABASE_PASSWORD
 sed -i '16,26d' $INSTALLATION_FOLDER/wso2am*/repository/conf/deployment.toml
 sed -i '16 i [database.apim_db]' $INSTALLATION_FOLDER/wso2am*/repository/conf/deployment.toml
 sed -i '17 i type = "mysql"' $INSTALLATION_FOLDER/wso2am*/repository/conf/deployment.toml
-sed -i '18 i url = "jadbc:mysql://'"$DATABASE_HOSTNAME"':'"$DATABASE_PORT"'/'"$DATABASE_APIM_DB"'?autoReconnect=true&amp;useSSL=false"' $INSTALLATION_FOLDER/wso2am*/repository/conf/deployment.toml
+sed -i '18 i url = "jdbc:mysql://'"$DATABASE_HOSTNAME"':'"$DATABASE_PORT"'/'"$DATABASE_APIM_DB"'?autoReconnect=true&amp;useSSL=false"' $INSTALLATION_FOLDER/wso2am*/repository/conf/deployment.toml
 sed -i '19 i username = "'"$DATABASE_USERNAME"'"' $INSTALLATION_FOLDER/wso2am*/repository/conf/deployment.toml
 sed -i '20 i password = "'"$DATABASE_PASSWORD"'"' $INSTALLATION_FOLDER/wso2am*/repository/conf/deployment.toml
 sed -i '21 i driver = "com.mysql.cj.jdbc.Driver"\n' $INSTALLATION_FOLDER/wso2am*/repository/conf/deployment.toml

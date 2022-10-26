@@ -87,8 +87,8 @@ fi
 tar -czf /tmp/n2/wso2am_n2.tar.gz /tmp/n2/wso2am*
 scp /tmp/n2/wso2am*.zip $N2_USER@$NODE2:/tmp/
 
-# TODO: LEMBRAR DE APAGAR A PASTA /TMP/N2
-#rm -r /tmp/n2
+
+rm -r /tmp/n2
 
 cd ..
 
