@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/4140822/creating-multiple-files-with-content-from-shell

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Please enter the pattern: "
+read PATTERN
+STRING=""
+
+for i in $(seq 1 $PATTERN)
+do
+	STRING="$STRING $i"
+	echo $STRING
+done

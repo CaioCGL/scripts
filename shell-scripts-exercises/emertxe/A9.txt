@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Please enter the complete name of the file: "
+read FILE
+
+sed '/^$/d' $FILE > /tmp/tmpfileA9.txt
+
+cat /tmp/tmpfileA9.txt > $FILE
+
+cat $FILE

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Enter the numbers to addition"
+read N1
+read N2
+echo
+
+echo "Answer is $(($N1 + $N2))"

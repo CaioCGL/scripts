@@ -1,0 +1,7 @@
+Hello this
+files
+contains so many
+empty lines
+which has to be removed
+by your script
+bye

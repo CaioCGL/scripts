@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo "Enter the string: "
+read STRING
+
+SIZE=${#STRING}
+OPERATOR=${STRING:(( ${#STRING} - 1 )):1}
+CALC=0
+
+for (( i=0; i<${#STRING}-1; i++ )); do
+	case $OPERATOR in
+		+)
+			CALC=$(( $CALC + ${STRING:$i:1} ))
+			;;
+		-)
+			CALC=$(( $CALC - ${STRING:$i:1} ))
+			;;
+		*)
+			if [[ $i -eq 0 ]]; then CALC=1; fi
+			CALC=$(( $CALC * ${STRING:$i:1} ))
+			;;
+		*)
+			echo "Operator missing"
+			exit 1
+			;;
+	esac
+done
+echo "The result of your operation is: $CALC"

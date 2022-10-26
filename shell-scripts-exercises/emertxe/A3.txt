@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Enter the pattern: "
+read PATTERN
+echo
+
+for i in $(seq 1 $PATTERN)
+do
+	echo $i
+done

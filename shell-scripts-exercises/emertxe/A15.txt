@@ -1,0 +1,64 @@
+#!/bin/bash
+
+echo "============= Logged in users: ============="
+echo
+
+w
+
+echo
+echo "============= Your shell directory ============="
+echo
+
+cat /etc/passwd | grep $(whoami)
+
+echo
+echo "============= Home directory ============="
+echo
+
+echo $HOME
+
+echo
+echo "============= OS name & version ============="
+echo
+
+cat /etc/*-release
+
+echo
+echo "============= Current working directory ============="
+echo
+
+pwd
+
+echo
+echo "============= Number of users logged in ============="
+echo
+
+USERS_NUMBER=$(w | wc -l)
+USERS_NUMBER=$(($USERS_NUMBER - 2))
+echo "Number of users logged in: $USERS_NUMBER"
+
+echo
+echo "============= All available shells in your system ============="
+echo
+
+echo
+echo "============= Hard disk information  ============="
+echo
+
+echo
+echo "============= CPU information ============="
+echo
+
+echo
+echo "============= Memory information ============="
+echo
+
+echo
+echo "============= File system information ============="
+echo
+
+echo
+echo "============= Currently running process ============="
+echo
+
+ps aux
