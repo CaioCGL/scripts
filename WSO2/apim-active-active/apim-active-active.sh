@@ -1,6 +1,6 @@
 #!/bin/sh
 
-## RUN THIS SCRIPT IN BOTH WSO2 API MANAGER NODES, ASSIGNING NODE 1 OR NODE 2 FOR EACH ONE.
+# OBS: Before run this script, make sure the wso2am-4.1.0.zip file is inside this directory.
 
 echo
 echo "STARTING WSO2 API MANAGER ACTIVE-ACTIVE INSTALLATION..."
@@ -28,10 +28,10 @@ echo "PLEASE TYPE THE NODE 2 USERNAME: "
 read N2_USER
 
 # TODO VERIFICAR SE TEM O ZIP/UNZIP INSTALADO
-# echo | sudo apt install zip unzip -y
+echo | sudo apt install zip unzip -y
 
 # TODO IMPLEMENTAR VERIFICAÇÃO DE PERMISSÕES DA PASTA DESTINO
-# unzip ./wso2am*.zip -d $INSTALLATION_FOLDER
+unzip ./wso2am*.zip -d $INSTALLATION_FOLDER
 
 cd ./secondary_scripts
 
